@@ -3,4 +3,5 @@
 	url = https://github.com/atsushieno/nclang.git
 [submodule "external/libsoundio"]
 	path = external/libsoundio
-	url = https://github.com/andrewrk/libsoundio.git
+	url = https://github.com/VoiceAmongUs/libsoundio.git
+	branch = v2
