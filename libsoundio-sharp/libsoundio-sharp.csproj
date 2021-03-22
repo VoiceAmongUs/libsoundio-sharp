@@ -7,13 +7,9 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="libs\libsoundio.so">
-      <Link>libsoundio.so</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="libs\libsoundio.dylib">
-      <Link>libsoundio.dylib</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <ProjectReference Include="..\external\nclang\samples\PInvokeGenerator\PInvokeGenerator.csproj" />
   </ItemGroup>
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="cd &quot;C:\Program Files\LLVM\bin&quot; &amp;&amp; &quot;$(SolutionDir)\external\nclang\samples\PInvokeGenerator\bin\$(Configuration)\net472\PInvokeGenerator.exe&quot; --lib:soundio --ns:SoundIOSharp &quot;$(SolutionDir)\external\libsoundio\soundio\soundio.h&quot; &gt; &quot;$(SolutionDir)\libsoundio-sharp\libsoundio-interop.cs&quot;" />
+  </Target>
 </Project>
