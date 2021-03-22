@@ -182,7 +182,7 @@ namespace SoundIOSharp
 		// functions
 
 		public int BackendCount {
-			get { return Natives.soundio_backend_count (handle); }
+			get { return Natives.soundio_backend_count (); }
 		}
 
 		public int InputDeviceCount {
@@ -203,7 +203,7 @@ namespace SoundIOSharp
 
 		public SoundIOBackend GetBackend (int index)
 		{
-			return (SoundIOBackend) Natives.soundio_get_backend (handle, index);
+			return (SoundIOBackend) Natives.soundio_get_backend (index);
 		}
 
 		public SoundIODevice GetInputDevice (int index)
@@ -305,7 +305,7 @@ namespace SoundIOSharp
 
 		public static string GetSoundFormatName (SoundIOFormat format)
 		{
-			return Marshal.PtrToStringAnsi (Natives.soundio_format_string ((SoundIoFormat) format));
+			return Marshal.PtrToStringAnsi (Natives.soundio_format_name((SoundIoFormat) format));
 		}
 	}
 }

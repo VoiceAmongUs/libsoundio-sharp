@@ -6,7 +6,7 @@ namespace SoundIOSharp
 	public class SoundIOException : Exception
 	{
 		internal SoundIOException (SoundIoError errorCode)
-			: base (Marshal.PtrToStringAnsi (Natives.soundio_strerror ((int) errorCode)))
+			: base (Marshal.PtrToStringAnsi (Natives.soundio_error_name(errorCode)))
 		{
 		}
 	}

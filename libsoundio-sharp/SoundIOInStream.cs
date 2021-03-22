@@ -162,7 +162,7 @@ namespace SoundIOSharp
 		public string LayoutErrorMessage {
 			get {
 				var code = (SoundIoError) Marshal.ReadInt32 (handle, layout_error_offset);
-				return code == SoundIoError.SoundIoErrorNone ? null : Marshal.PtrToStringAnsi (Natives.soundio_strerror ((int) code));
+				return code == SoundIoError.SoundIoErrorNone ? null : Marshal.PtrToStringAnsi (Natives.soundio_error_name(code));
 			}
 		}
 		static readonly int layout_error_offset = (int)Marshal.OffsetOf<SoundIoInStream> ("layout_error");

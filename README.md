@@ -13,3 +13,7 @@ libsoundio-sharp makes use of [nclang](https://github.com/atsushieno/nclang/) PI
 libsoundio-sharp is verified to work on Mono on Linux, and supposed to work on .NET Framework and .NET Core.
 
 The library is provided under the MIT License. Samples are ported from libsoundio which is largely attributed to Andrew Kelley (the original libsoundio author).
+
+# Additional Note
+
+Nclang requires an installation of clang on your system. Make sure your DLL search path includes `libclang.dll` (e.g. `C:\Program Files\LLVM\bin`).
