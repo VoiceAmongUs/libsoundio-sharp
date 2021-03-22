@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "sio-sine": {
+      "commandName": "Project",
+      "workingDirectory": "$(SolutionDir)\\external\\libsoundio-docker-build\\build\\win-x86_64\\lib"
+    }
+  }
+}

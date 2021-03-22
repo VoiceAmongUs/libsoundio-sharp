@@ -1,7 +1,6 @@
 [submodule "external/nclang"]
 	path = external/nclang
 	url = https://github.com/atsushieno/nclang.git
-[submodule "external/libsoundio"]
-	path = external/libsoundio
-	url = https://github.com/VoiceAmongUs/libsoundio.git
-	branch = v2
+[submodule "external/libsoundio-docker-build"]
+	path = external/libsoundio-docker-build
+	url = https://github.com/VoiceAmongUs/libsoundio-docker-build.git

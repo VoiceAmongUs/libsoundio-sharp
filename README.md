@@ -16,4 +16,8 @@ The library is provided under the MIT License. Samples are ported from libsoundi
 
 # Additional Note
 
+Clone this repository using `git clone --recurse-submodules`.
+
 Nclang requires an installation of clang on your system. Make sure your library search path includes `libclang` (e.g. `C:\Program Files\LLVM\bin` for `libclang.dll` on Windows).
+
+This repository references [libsoundio-docker-build](https://github.com/VoiceAmongUs/libsoundio-docker-build), and contains the same VSCode tasks to instrument the Docker toolchain.

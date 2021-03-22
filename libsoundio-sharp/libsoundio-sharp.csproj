@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.1;netstandard2.0;net472</TargetFrameworks>
     <Title>libsoundio-sharp</Title>
     <Version>1.0.0</Version>
     <RootNamespace>SoundIOSharp</RootNamespace>
@@ -10,6 +10,6 @@
     <ProjectReference Include="..\external\nclang\samples\PInvokeGenerator\PInvokeGenerator.csproj" />
   </ItemGroup>
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="cd &quot;C:\Program Files\LLVM\bin&quot; &amp;&amp; &quot;$(SolutionDir)\external\nclang\samples\PInvokeGenerator\bin\$(Configuration)\net472\PInvokeGenerator.exe&quot; --lib:soundio --ns:SoundIOSharp &quot;$(SolutionDir)\external\libsoundio\soundio\soundio.h&quot; &gt; &quot;$(SolutionDir)\libsoundio-sharp\libsoundio-interop.cs&quot;" />
+    <Exec Command="cd &quot;C:\Program Files\LLVM\bin&quot; &amp;&amp; &quot;$(SolutionDir)\external\nclang\samples\PInvokeGenerator\bin\$(Configuration)\net472\PInvokeGenerator.exe&quot; --lib:libsoundio --ns:SoundIOSharp &quot;$(SolutionDir)\external\libsoundio-docker-build\libsoundio\soundio\soundio.h&quot; &gt; &quot;$(SolutionDir)\libsoundio-sharp\libsoundio-interop.cs&quot;" />
   </Target>
 </Project>
