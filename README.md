@@ -16,4 +16,4 @@ The library is provided under the MIT License. Samples are ported from libsoundi
 
 # Additional Note
 
-Nclang requires an installation of clang on your system. Make sure your DLL search path includes `libclang.dll` (e.g. `C:\Program Files\LLVM\bin`).
+Nclang requires an installation of clang on your system. Make sure your library search path includes `libclang` (e.g. `C:\Program Files\LLVM\bin` for `libclang.dll` on Windows).
