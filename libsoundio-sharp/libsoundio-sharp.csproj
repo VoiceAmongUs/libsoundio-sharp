@@ -5,6 +5,17 @@
     <Version>1.0.0</Version>
     <RootNamespace>SoundIOSharp</RootNamespace>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Description>SoundIOSharp is a C# wrapper for the libsoundio (https://github.com/andrewrk/libsoundio) cross-platform audio I/O library.</Description>
+    <Copyright>Copyright © 2021</Copyright>
+    <PackageProjectUrl>https://github.com/VoiceAmongUs/libsoundio-sharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/VoiceAmongUs/libsoundio-sharp</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <Company />
+    <PackageTags>audio sound microphone</PackageTags>
+    <Authors>Atsushi Eno, Timothée Lecomte, Christoph Honal</Authors>
+    <PackageIconUrl />
+    <PackageId>VoiceAmongUs.SoundIOSharp</PackageId>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\external\nclang\samples\PInvokeGenerator\PInvokeGenerator.csproj" />
