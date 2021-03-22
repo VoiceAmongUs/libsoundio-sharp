@@ -64,7 +64,7 @@ namespace SoundIOSharp
 			get { return new SoundIOChannelLayout ((IntPtr) handle + layout_offset); }
 			set {
 				unsafe {
-					Buffer.MemoryCopy ((void*) ((IntPtr) handle + layout_offset), (void*)value.Handle,
+					Buffer.MemoryCopy ((void*)value.Handle, (void*) ((IntPtr) handle + layout_offset),
 							   Marshal.SizeOf<SoundIoChannelLayout> (), Marshal.SizeOf<SoundIoChannelLayout> ());
 				}
 			}
