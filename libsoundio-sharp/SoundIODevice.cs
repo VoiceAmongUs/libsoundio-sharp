@@ -174,6 +174,8 @@ namespace SoundIOSharp
 		public static readonly SoundIOFormat U16NE = BitConverter.IsLittleEndian ? SoundIOFormat.U16LE : SoundIOFormat.U16BE;
 		public static readonly SoundIOFormat S24NE = BitConverter.IsLittleEndian ? SoundIOFormat.S24LE : SoundIOFormat.S24BE;
 		public static readonly SoundIOFormat U24NE = BitConverter.IsLittleEndian ? SoundIOFormat.U24LE : SoundIOFormat.U24BE;
+		public static readonly SoundIOFormat S24PackedNE = BitConverter.IsLittleEndian ? SoundIOFormat.S24PackedLE : SoundIOFormat.S24PackedBE;
+		public static readonly SoundIOFormat U24PackedNE = BitConverter.IsLittleEndian ? SoundIOFormat.U24PackedLE : SoundIOFormat.U24PackedBE;
 		public static readonly SoundIOFormat S32NE = BitConverter.IsLittleEndian ? SoundIOFormat.S32LE : SoundIOFormat.S32BE;
 		public static readonly SoundIOFormat U32NE = BitConverter.IsLittleEndian ? SoundIOFormat.U32LE : SoundIOFormat.U32BE;
 		public static readonly SoundIOFormat Float32NE = BitConverter.IsLittleEndian ? SoundIOFormat.Float32LE : SoundIOFormat.Float32BE;
@@ -182,6 +184,8 @@ namespace SoundIOSharp
 		public static readonly SoundIOFormat U16FE = !BitConverter.IsLittleEndian ? SoundIOFormat.U16LE : SoundIOFormat.U16BE;
 		public static readonly SoundIOFormat S24FE = !BitConverter.IsLittleEndian ? SoundIOFormat.S24LE : SoundIOFormat.S24BE;
 		public static readonly SoundIOFormat U24FE = !BitConverter.IsLittleEndian ? SoundIOFormat.U24LE : SoundIOFormat.U24BE;
+		public static readonly SoundIOFormat S24PackedFE = !BitConverter.IsLittleEndian ? SoundIOFormat.S24PackedLE : SoundIOFormat.S24PackedBE;
+		public static readonly SoundIOFormat U24PackedFE = !BitConverter.IsLittleEndian ? SoundIOFormat.U24PackedLE : SoundIOFormat.U24PackedBE;
 		public static readonly SoundIOFormat S32FE = !BitConverter.IsLittleEndian ? SoundIOFormat.S32LE : SoundIOFormat.S32BE;
 		public static readonly SoundIOFormat U32FE = !BitConverter.IsLittleEndian ? SoundIOFormat.U32LE : SoundIOFormat.U32BE;
 		public static readonly SoundIOFormat Float32FE = !BitConverter.IsLittleEndian ? SoundIOFormat.Float32LE : SoundIOFormat.Float32BE;

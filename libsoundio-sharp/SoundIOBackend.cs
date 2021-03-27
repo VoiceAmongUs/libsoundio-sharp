@@ -9,7 +9,6 @@ namespace SoundIOSharp
 		Alsa = 3,
 		CoreAudio = 4,
 		Wasapi = 5,
-
 		Android = 6,
 		Dummy = 7,
 	}
