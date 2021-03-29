@@ -103,6 +103,7 @@ namespace SoundIOSharp
 		}
 		static readonly int jack_error_callback_offset = (int)Marshal.OffsetOf<SoundIo> ("jack_error_callback");
 		Action<string> jack_error_callback;
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		delegate void jack_error_delegate (string message);
 		jack_error_delegate jack_error_callback_native;
 
@@ -121,6 +122,7 @@ namespace SoundIOSharp
 		}
 		static readonly int jack_info_callback_offset = (int)Marshal.OffsetOf<SoundIo> ("jack_info_callback");
 		Action<string> jack_info_callback;
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		delegate void jack_info_delegate (string message);
 		jack_info_delegate jack_info_callback_native;
 
@@ -139,6 +141,7 @@ namespace SoundIOSharp
 		}
 		static readonly int on_backend_disconnect_offset = (int)Marshal.OffsetOf<SoundIo> ("on_backend_disconnect");
 		Action<int> on_backend_disconnect;
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		delegate void on_backend_disconnect_delegate (IntPtr handle, int errorCode);
 		on_backend_disconnect_delegate on_backend_disconnect_native;
 
@@ -157,6 +160,7 @@ namespace SoundIOSharp
 		}
 		static readonly int on_devices_change_offset = (int)Marshal.OffsetOf<SoundIo> ("on_devices_change");
 		Action on_devices_change;
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		delegate void on_devices_change_delegate (IntPtr handle);
 		on_devices_change_delegate on_devices_change_native;
 
@@ -175,6 +179,7 @@ namespace SoundIOSharp
 		}
 		static readonly int on_events_signal_offset = (int)Marshal.OffsetOf<SoundIo> ("on_events_signal");
 		Action on_events_signal;
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		delegate void on_events_signal_delegate (IntPtr handle);
 		on_events_signal_delegate on_events_signal_native;
 

@@ -90,6 +90,7 @@ namespace SoundIOSharp
 		}
 		static readonly int error_callback_offset = (int)Marshal.OffsetOf<SoundIoInStream> ("error_callback");
 		Action error_callback;
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		delegate void error_callback_delegate (IntPtr handle);
 		error_callback_delegate error_callback_native;
 
@@ -105,6 +106,8 @@ namespace SoundIOSharp
 		}
 		static readonly int read_callback_offset = (int)Marshal.OffsetOf<SoundIoInStream> ("read_callback");
 		Action<int, int> read_callback;
+
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		delegate void read_callback_delegate (IntPtr handle, int min, int max);
 		read_callback_delegate read_callback_native;
 
@@ -120,6 +123,7 @@ namespace SoundIOSharp
 		}
 		static readonly int overflow_callback_offset = (int)Marshal.OffsetOf<SoundIoInStream> ("overflow_callback");
 		Action overflow_callback;
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		delegate void overflow_callback_delegate (IntPtr handle);
 		overflow_callback_delegate overflow_callback_native;
 
